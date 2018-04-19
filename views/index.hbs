@@ -1,0 +1,46 @@
+﻿<h1>{{title}}</h1>
+<p>Welcome to {{title}}</p>
+<form id="uploadForm" class="fileupload" action="upload" method="post" enctype="multipart/form-data">
+    <h1>Upload File Here</h1>
+    <input id="fileselect" type="file" name="upfile" value="">
+    <input type="submit" />
+    <!--nicht genug Translation Models-->
+    <!--<select id="languageSelection" onchange="setAction()">
+        <option value="en">Englisch</option>
+        <option value="es">Spanisch</option>
+        <option value="de">Deutsch</option>
+        <option value="fr">Französisch</option>
+        <option value="it">Italienisch</option>
+        <option value="ko">Koreanisch</option>
+        <option value="ar">Arabisch</option>
+        <option value="js">Japanisch</option>
+    </select>-->
+</form>
+<!--<br />
+<br />
+<button onclick="sendText()">Übersetzen</button>
+<br />
+<br />
+<textarea style="overflow-y:scroll; resize:none" placeholder="Übersetzung:" cols="80" rows="20" id="recognizedText"></textarea>
+<textarea style="overflow-y:scroll; resize:none" placeholder="Übersetzung:" cols="80" rows="20" id="translatedText"></textarea>-->
+<script>
+    //function setAction() {
+    //    var language = document.getElementById("languageSelection").value;
+    //    document.getElementById("uploadForm").action = "upload/" + language;
+    //};
+
+    //function sendText() {
+    //    $.ajax({
+    //        type: 'GET',
+    //        url: 'http://localhost:3000/translate',
+    //        dataType: 'html'
+    //    })
+    //    .done(function (data) {
+    //        console.log('GET Response:' + data);
+    //        $('#translatedText').html(data);
+    //    })
+    //    .fail(function (jqXHR, textStatus, err) {
+    //        console.log('AJAX Error response:' + textStatus);
+    //    });
+    //};
+</script>

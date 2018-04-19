@@ -1,0 +1,106 @@
+﻿<body>
+    <!--<div class="row justify-content-md-center container-fluid">-->
+        <!-- Steps form -->
+        <div class="card">
+            <div class="card-body mb-4">
+        
+                <h2 class="text-center font-weight-bold pt-4 pb-5"><strong>VisionTranslator</strong></h2>
+                
+                <!-- Stepper -->
+                <div class="steps-form">
+                    <div class="steps-row setup-panel">
+                        <div class="steps-step">
+                            <a href="#step-9" type="button" class="btn btn-indigo btn-circle">1</a>
+                        </div>
+                        <div class="steps-step">
+                            <a href="#step-10" type="button" class="btn btn-default btn-circle" disabled="disabled">2</a>
+                        </div>
+                        <div class="steps-step">
+                            <a href="#step-11" type="button" class="btn btn-default btn-circle" disabled="disabled">3</a>
+                        </div>
+                    </div>
+                </div>
+        
+                <form role="form" id="uploadForm" class="fileupload" action="upload" method="post" enctype="multipart/form-data">
+        
+                    <!-- First Step -->
+                    <div class="row setup-content" id="step-9">
+                        <div class="col-md-12 align-content-center">
+                            <h3 class="font-weight-bold pl-0 my-2"><strong>Upload your picture:</strong></h3>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="md-form form-lg">
+                                        <div class="file-field">
+                                            <div class="btn btn-indigo btn-sm float-left">
+                                                <span>Choose file</span>
+                                                <input id="fileselect" type="file" name="upfile" value="" class="btn btn-indigo">
+                                            </div>
+                                            <div class="file-path-wrapper">
+                                                <input value="" class="file-path validate" type="text" placeholder="Upload your file">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>                            
+                                <div class="row">
+                                    <div class="col-12">
+                                        <button class="btn btn-default btn-sm float-right" type="submit" value="Submit">Send</button>
+                                    </div>
+                                </div>
+                            
+                            <!--Vorheriger Upload: <input id="fileselect" type="file" name="upfile" value="" class="btn btn-indigo"></input> -->
+
+                            <!--Card-->
+                            <div class="row justify-content-center">
+                            <div class="card">
+
+                                <!--Card image-->
+                                <img class="img-fluid" src="./image" alt="Card image cap">
+
+                            </div>
+                            </div>
+
+                            <!--/.Card-->
+                            <button class="btn btn-indigo nextBtn btn-sm float-right my-4" type="button">next</button>
+                        </div>
+                    </div>
+        
+                    <!-- Second Step -->
+                    <div class="row setup-content" id="step-10">
+                        <div class="col-md-12">
+                            <h4 class="font-weight-bold pl-0 my-2"><strong>Text Recognition:</strong></h4>
+                            <label for="Erkannte_Sprache" class="grey-text">Language:</label>
+                            <input value="{{language}}" type="text" id="Sprache" class="form-control" readonly>
+                            <label for="Text" class="grey-text my-2">Text:</label>
+                            <textarea placeholder="Please upload your image first." type="text" id="defaultFormContactMessageEx" class="form-control my-2" rows="3" readonly>{{eingabe}}</textarea>
+                            <button class="btn btn-indigo prevBtn btn-sm float-left my-4" type="button">back</button>
+                            <button class="btn btn-indigo nextBtn btn-sm float-right my-4" type="button">next</button>
+                        </div>
+                    </div>
+        
+                    <!-- Third Step -->
+                    <div class="row setup-content" id="step-11">
+                        <div class="col-md-12 clearfix">
+                            <h4 class="font-weight-bold pl-0 my-2"><strong>Translation:</strong></h4>
+                            <textarea placeholder="Please upload your image first." type="text" id="defaultFormContactMessageEx" class="form-control" rows="3" readonly>{{ausgabe}}</textarea>
+                            <button class="btn btn-indigo prevBtn btn-sm float-left my-4" type="button">back</button>
+                        </div>
+                    </div>
+                </form>
+        
+            </div>
+        </div>
+    <!-- Steps form -->                
+                                
+    <!--</div>-->
+
+    <!-- SCRIPTS -->
+    <!-- JQuery -->
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+</body>
